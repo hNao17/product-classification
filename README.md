@@ -50,7 +50,6 @@ The end-end architecture is summarized below:
 Please note that the choice of base network is flexible; users can replace the MobileNet model with other pre-trained models that are available in Keras, such as Inception-v3[3] and Inception-ResNet-v2[4].
 
 ### Training
-
 The product category classifier is trained using the following hyperparameters: 
 
 - loss function: multi-class cross entropy loss
@@ -63,8 +62,25 @@ To address overfitting, L2 regularization with a weight decay value of 0.0001 is
 
 ## Product Classification Using Siamese Networks
 ### Architecture
+A siamese network is trained to classify the similarity between two images. With respect to grocery store product classification, a similarity classification can be used to match product images recorded in-store with images in an offline store database. An overview of the network is shown below:
+
+The network receives an input pair of A and B images, consisting of either 'similar' or dissimilar' products. For similar product pairs, a label of 1 is used, whereas dissimilar products are labelled as 0. The siamese network first uses a shared base network to generate encodings for both A and B images. These encodings are then compared with each other using a cosine distance similarity metric: 
+
+d(A,B) = A.B / ||A|| ||B||
+
+The calculated similarity is then classified using a sigmoid layer. 
+
+For this implementation, the MobileNet base network is reused from the previous product category classifier. Additionally, experiments have been conducted using alternative similarity metrics, such as L1 and L2 distances.
+
 
 ### Training
+The product classifier siamese network is trained using the following hyperparameters: 
+
+- loss function: binary cross entropy loss
+- optimizer: RMS_prop
+- number of epochs: 100
+- batch size: 32
+- learning rate: 0.001
 
 ## References
 [1]: P. Jund, N. Abdo, A. Eitel, and W. Burgard, “The Freiburg Groceries Dataset,” 2016.
