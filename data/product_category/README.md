@@ -29,6 +29,8 @@ This dataset consists of approximately 5000 real-world images of grocery 25 stor
 The training examples in the original dataset are unevenly distributed over 25 classes corresponding to generic product
 categories , with the number of training examples per class varying between 97 to 380.
 
+![alt text](freiburg_groceries_image_distribution.png)
+
 Ideally, the dataset should have an equal distribution of images over all 25 classes. Data augmentation methods available in Keras' ImageDataGenerator library can be used to create an equal distribution. In this implementation, data augmentation methods such as horizontal shifts, vertical shifts and shear transformations are applied to images in each class, until a target number of 400 images / class is achieved. The final dataset size is 10,000 images.
 
 ## Train / Validation / Test Splits
