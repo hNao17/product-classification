@@ -18,7 +18,7 @@ The datasets used to train and evaluate the product classifier were recorded on 
 
 ### Train / Validation
 The trainval set consists of 260 initial images evenly distributed over 26 classes. The dataset’s size is further increased offline using data augmentation techniques such as including horizontal shifts, vertical shifts and shear
-transformations. The final trainval size is 1300 images. These images are then divided into train and validation images using a 70% / 30% split.
+transformations. The final trainval size is 1300 images. These images are then divided into train and validation sets using a 70% / 30% split.
 
 A summary of the classes found in the trainval set is shown below.
 
@@ -56,7 +56,7 @@ A summary of the classes found in the trainval set is shown below.
 ### Test
 A separate test set is used to evaluate the trained product classifier. This test set consists of 110 evenly-distributed images from 11 classes not seen during training.
 
-The classes used in the test set are shown below:
+An overview of the test set's classes is shown below:
 
 |Class Number| Product Name|
 |------------|-------------|
