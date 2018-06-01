@@ -64,7 +64,7 @@ To address overfitting, L2 regularization with a weight decay value of 0.0001 is
 ### Architecture
 A siamese network is trained to classify the similarity between two images. With respect to grocery store product classification, a similarity classification can be used to match product images recorded in-store with images in an offline store database. An overview of the network is shown below:
 
-![alt tag](product-classification/siamese_network_architecture.png)
+![alt text](siamese_network_architecture.png)
 
 The network receives an input pair of A and B images, consisting of either 'similar' or dissimilar' products. For similar product pairs, a label of 1 is used, whereas dissimilar products are labelled as 0. The siamese network first uses a shared base network to generate encodings for both A and B images. These encodings are then compared with each other using a cosine distance similarity metric: 
 
