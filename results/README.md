@@ -29,11 +29,11 @@ Overall, the results in Cases 1-5 demonstrate that while the model’s variance 
 through the additional regularization in Cases 4 and 5, this came at the cost of a significantly decreased training accuracy.
 
 ## Product Classification
-Four Siamese networks were trained using Inception-v3 [2], MobileNet [3], Inception-ResNet-v2[4] and ResNet50 base networks. Training and validation accuracy results are displayed in the two graphs below:
+Four Siamese networks were trained using Inception-v3 [2], MobileNet [3], Inception-ResNet-v2[4] and ResNet50[5] base networks. Training and validation accuracy results are displayed in the two graphs below:
 
-![alt_text]()
+![alt_text](product_training_results.png)
 
-![alt_text]()
+![alt_text](product_val_results.png)
 
 The choice of base network did not affect the Siamese network’s performance on the training and validation sets, as all four networks achieved 100% accuracies on both sets.
 
