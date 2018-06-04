@@ -74,8 +74,7 @@ d(A,B) = A.B / ||A|| ||B||
 
 The calculated similarity is then classified using a sigmoid layer. 
 
-For this implementation, the MobileNet base network is reused from the previous product category classifier. Additionally, experiments have been conducted using alternative similarity metrics, such as L1 and L2 distances.
-
+For this implementation, Keras pre-trained models of [2]-[5]  are used as base networks.
 
 ### Training 
 
